@@ -1,3 +1,10 @@
 # Directories
 Library/
 Temp/
+
+# Files created by MonoDevelop
+*.pidb
+*.sln
+*.userprefs
+*.csproj
+*.orig
