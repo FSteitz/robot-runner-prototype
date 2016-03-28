@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+	private const string COLLECTIBLE_TAG = "Collectible";
+
 	public float movementVelocity = 25.0f;
 	public float jumpVelocity = 8.0f;
 	public float gravity = 9.8F;
@@ -56,9 +58,7 @@ public class PlayerController : MonoBehaviour {
 				targetLanePosition = middleLanePosition;
 			} else if (isOnLane(rightLanePosition) && !moveRight) {
 				targetLanePosition = middleLanePosition;
-			}
-
-			if (targetLanePosition == null) {
+			} else {
 				resetMovementState();
 			}
 		}
@@ -75,6 +75,13 @@ public class PlayerController : MonoBehaviour {
 
 		character.Move(moveDirection * Time.deltaTime);
 		moveLanePositionsForward();
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.CompareTag(COLLECTIBLE_TAG)) {
+			other.gameObject.SetActive(false);
+		}
+	
 	}
 
 	private void moveLanePositionsForward() {
