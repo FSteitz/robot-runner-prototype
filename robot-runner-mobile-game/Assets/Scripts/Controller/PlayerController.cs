@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour {
+using Vaneftec.Game.Common.Controller;
+
+public class PlayerController : GameController {
 
 	private const string COLLECTIBLE_TAG = "Collectible";
 
@@ -28,6 +30,8 @@ public class PlayerController : MonoBehaviour {
 		character = GetComponent<CharacterController>();
 		defaultHeight = character.height;
 		jumpHeight = character.height / 2;
+
+		gameContext.StartLevel();
 	}
 
 	void Update() {
@@ -80,8 +84,8 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.CompareTag(COLLECTIBLE_TAG)) {
 			other.gameObject.SetActive(false);
+			scoreManager.UpdateScore(1);
 		}
-	
 	}
 
 	private void moveLanePositionsForward() {
