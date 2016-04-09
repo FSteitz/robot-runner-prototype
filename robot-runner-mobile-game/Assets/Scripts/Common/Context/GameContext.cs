@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-using Vaneftec.Game.Common.Singleton;
 using Vaneftec.Game.Common.Level;
 using Vaneftec.Game.Common.Score;
 
