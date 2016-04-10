@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using Vaneftec.Game.Common.Level;
 using Vaneftec.Game.Common.Score;
+using Vaneftec.Game.Common.Settings;
 
 // Copyright (c) Florian Steitz
 namespace Vaneftec.Game.Common.Context {
@@ -14,6 +15,7 @@ namespace Vaneftec.Game.Common.Context {
 
 		public LevelManager LevelManager { get; set; }
 		public ScoreManager ScoreManager { get; set; }
+		public GameSettings GameSettings { get; set; }
 
 		private static GameContext instance;
 
@@ -23,6 +25,7 @@ namespace Vaneftec.Game.Common.Context {
 		public GameContext() {
 			LevelManager = new LevelManager();
 			ScoreManager = new ScoreManager();
+			GameSettings = new GameSettings(); // TODO replace with ScriptableObject instantiation
 		}
 
 		/// <summary>
