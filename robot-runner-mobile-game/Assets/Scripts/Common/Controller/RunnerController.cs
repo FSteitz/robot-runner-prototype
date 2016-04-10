@@ -2,7 +2,6 @@
 
 using UnityEngine;
 
-using Vaneftec.Game.Common.Controller;
 using Vaneftec.Game.Common.Settings;
 
 // Copyright (c) Florian Steitz
@@ -11,16 +10,28 @@ namespace Vaneftec.Game.Common.Controller {
 	/// <summary>
 	/// TODO
 	/// </summary>
-	public class LanePositionController : GameController {
+	public abstract class RunnerController : GameController {
 
 		/// <summary>
 		/// TODO
 		/// </summary>
 		void Update() {
-			Debug.Log("called");
-			Debug.Log(gameSettings.MovementVelocity);
-			transform.Translate(Vector3.forward * gameSettings.MovementVelocity * Time.deltaTime);
+			Move(Vector3.forward);
 		}
+
+		/// <summary>
+		/// TODO
+		/// </summary>
+		/// <returns>TODO</returns>
+		/// <param name="position">TODO</param>
+		protected Vector3 applyMoveDelta(Vector3 direction) {
+			return direction * gameSettings.MovementVelocity * Time.deltaTime;
+		}
+
+		/// <summary>
+		/// TODO
+		/// </summary>
+		/// <param name="position">TODO</param>
+		protected abstract void Move(Vector3 direction);
 	}
 }
-
