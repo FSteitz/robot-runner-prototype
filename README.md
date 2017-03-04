@@ -2,7 +2,6 @@
 *Robot Runner* is a game for mobile devices thas is based on the game engine Unity.
 
 ## Target platforms
-
 - Android (first iteration)
 - iOS
 
