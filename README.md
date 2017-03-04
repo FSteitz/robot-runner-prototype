@@ -1,5 +1,5 @@
 # Robot Runner
-*Robot Runner* is a game for mobile devices based on game engine _Unity_.
+*Robot Runner* is a game for mobile devices thas is based on the game engine Unity.
 
 **Target platforms:**
 
