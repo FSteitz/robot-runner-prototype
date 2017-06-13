@@ -15,10 +15,18 @@ namespace Vaneftec.Game.Common.Controller {
 	/// </summary>
 	public abstract class GameController : MonoBehaviour {
 		
-		protected static GameContext gameContext = GameContext.get();
+		protected static GameContext gameContext;
 
-		protected LevelManager levelManager = gameContext.LevelManager;
-		protected ScoreManager scoreManager = gameContext.ScoreManager;
-		protected GameSettings gameSettings = gameContext.GameSettings;
+		protected LevelManager levelManager;
+		protected ScoreManager scoreManager;
+		protected GameSettings gameSettings;
+
+		void Awake() {
+			gameContext = GameContext.get();
+
+			levelManager = gameContext.LevelManager;
+			scoreManager = gameContext.ScoreManager;
+			gameSettings = gameContext.GameSettings;		
+		}
 	}
 }

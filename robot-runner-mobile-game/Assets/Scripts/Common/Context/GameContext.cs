@@ -25,7 +25,7 @@ namespace Vaneftec.Game.Common.Context {
 		public GameContext() {
 			LevelManager = new LevelManager();
 			ScoreManager = new ScoreManager();
-			GameSettings = new GameSettings(); // TODO replace with ScriptableObject instantiation
+			GameSettings = GameSettings.CreateInstance<GameSettings> ();
 		}
 
 		/// <summary>
