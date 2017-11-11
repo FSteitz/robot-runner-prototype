@@ -20,30 +20,30 @@ using Vaneftec.Game.Common.Settings;
 namespace Vaneftec.Game.Common.Controller {
 
 	/// <summary>
-	/// TODO
+	///
 	/// </summary>
 	public abstract class RunnerController : GameController {
 
 		/// <summary>
-		/// TODO
+		///
 		/// </summary>
 		void Update() {
 			Move(Vector3.forward);
 		}
 
 		/// <summary>
-		/// TODO
+		///
 		/// </summary>
-		/// <returns>TODO</returns>
-		/// <param name="position">TODO</param>
+		/// <returns></returns>
+		/// <param name="position"></param>
 		protected Vector3 applyMoveDelta(Vector3 direction) {
 			return direction * gameSettings.MovementVelocity * Time.deltaTime;
 		}
 
 		/// <summary>
-		/// TODO
+		///
 		/// </summary>
-		/// <param name="position">TODO</param>
+		/// <param name="position"></param>
 		protected abstract void Move(Vector3 direction);
 	}
 }

@@ -21,7 +21,7 @@ using Vaneftec.Game.Common.Settings;
 namespace Vaneftec.Game.Common.Context {
 
 	/// <summary>
-	/// TODO
+	///
 	/// </summary>
 	public class GameContext {
 
@@ -32,7 +32,7 @@ namespace Vaneftec.Game.Common.Context {
 		private static GameContext instance;
 
 		/// <summary>
-		/// TODO
+		///
 		/// </summary>
 		public GameContext() {
 			LevelManager = new LevelManager();
@@ -41,7 +41,7 @@ namespace Vaneftec.Game.Common.Context {
 		}
 
 		/// <summary>
-		/// TODO
+		///
 		/// </summary>
 		public void StartLevel() {
 			if (LevelManager.CountLevels() == 0) {
@@ -57,7 +57,7 @@ namespace Vaneftec.Game.Common.Context {
 		}
 
 		/// <summary>
-		/// TODO
+		///
 		/// </summary>
 		public static GameContext get() {
 			if (instance == null) {

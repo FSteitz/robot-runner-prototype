@@ -50,15 +50,15 @@ namespace Vaneftec.Game.Common.Score {
 		}
 
 		/// <summary>
-		/// TODO
+		///
 		/// </summary>
-		/// <returns>TODO</returns>
+		/// <returns></returns>
 		public int GetScore() {
 			return CurrentLevel.CurrentScore;
 		}
 
 		/// <summary>
-		/// TODO
+		///
 		/// </summary>
 		public delegate void OnUpdate(int score);
 	}

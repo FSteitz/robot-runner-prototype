@@ -18,7 +18,7 @@ using UnityEngine;
 namespace Vaneftec.Game.Common.Settings {
 
 	/// <summary>
-	/// TODO
+	///
 	/// </summary>
 	public class GameSettings : ScriptableObject {
 
@@ -27,7 +27,7 @@ namespace Vaneftec.Game.Common.Settings {
 		public float Gravity { get; set; }
 
 		/// <summary>
-		/// TODO
+		///
 		/// </summary>
 		public GameSettings() {
 			MovementVelocity = 25.0f;

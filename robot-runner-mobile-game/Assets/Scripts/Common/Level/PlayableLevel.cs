@@ -16,7 +16,7 @@
 namespace Vaneftec.Game.Common.Level {
 
 	/// <summary>
-	/// TODO
+	///
 	/// </summary>
 	public class PlayableLevel {
 

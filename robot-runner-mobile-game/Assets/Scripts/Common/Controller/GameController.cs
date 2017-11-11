@@ -23,7 +23,7 @@ using Vaneftec.Game.Common.Settings;
 namespace Vaneftec.Game.Common.Controller {
 
 	/// <summary>
-	/// TODO
+	///
 	/// </summary>
 	public abstract class GameController : MonoBehaviour {
 
