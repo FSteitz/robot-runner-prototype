@@ -19,11 +19,17 @@ using Vaneftec.Game.Common.Controller;
 /// See the License for the specific language governing permissions and
 /// limitations under the License.
 ///
+/// <summary>
+///
+/// </summary>
 public class ScoreTextController : GameController {
 
 	private Text text;
 	private String defaultScoreText;
 
+  /// <summary>
+	///
+	/// </summary>
 	void Start() {
 		scoreManager.Register(UpdateDisplayedScore);
 		gameContext.StartLevel();
@@ -33,6 +39,9 @@ public class ScoreTextController : GameController {
 		UpdateDisplayedScore(scoreManager.GetScore());
 	}
 
+  /// <summary>
+	///
+	/// </summary>
 	private void UpdateDisplayedScore(int score) {
 		text.text = String.Format(defaultScoreText, score);
 	}

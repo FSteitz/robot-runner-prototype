@@ -17,6 +17,9 @@ using Vaneftec.Game.Common.Controller;
 /// See the License for the specific language governing permissions and
 /// limitations under the License.
 ///
+/// <summary>
+///
+/// </summary>
 public class PlayerController : GameController {
 
 	private const string COLLECTIBLE_TAG = "Collectible";
@@ -40,6 +43,9 @@ public class PlayerController : GameController {
 	private Vector3 targetDirection;
 	private GameObject targetLanePosition;
 
+  /// <summary>
+	///
+	/// </summary>
 	void Start() {
 		character = GetComponent<CharacterController>();
 		defaultHeight = character.height;
@@ -48,6 +54,9 @@ public class PlayerController : GameController {
 		gameContext.StartLevel();
 	}
 
+  /// <summary>
+	///
+	/// </summary>
 	void Update() {
 		Vector3 moveDirection = Vector3.zero;
 
@@ -95,6 +104,9 @@ public class PlayerController : GameController {
 		moveLanePositionsForward();
 	}
 
+  /// <summary>
+	///
+	/// </summary>
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.CompareTag(COLLECTIBLE_TAG)) {
 			other.gameObject.SetActive(false);
@@ -102,6 +114,9 @@ public class PlayerController : GameController {
 		}
 	}
 
+  /// <summary>
+	///
+	/// </summary>
 	private void moveLanePositionsForward() {
 		Vector3 forwardMovement = Vector3.forward * movementVelocity * Time.deltaTime;
 
@@ -110,6 +125,9 @@ public class PlayerController : GameController {
 		rightLanePosition.transform.Translate(forwardMovement);
 	}
 
+  /// <summary>
+	///
+	/// </summary>
 	private Vector3 moveToLane(GameObject lanePosition, Vector3 moveVector) {
 		Vector3 moveOffset = calculateDistance(lanePosition);
 		Vector3 moveDirection = moveOffset.normalized * movementVelocity;
@@ -126,14 +144,23 @@ public class PlayerController : GameController {
 		return targetPosition;
 	}
 
+  /// <summary>
+	///
+	/// </summary>
 	private bool isOnLane(GameObject lanePosition) {
 		return Mathf.Abs(calculateDistance(lanePosition).x) < 0.1;
 	}
 
+  /// <summary>
+	///
+	/// </summary>
 	private Vector3 calculateDistance(GameObject lanePosition) {
 		return lanePosition.transform.position - transform.position;
 	}
 
+  /// <summary>
+	///
+	/// </summary>
 	private void resetMovementState() {
 		targetLanePosition = null;
 

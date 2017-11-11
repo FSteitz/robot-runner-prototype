@@ -15,9 +15,14 @@ using System.Collections;
 /// See the License for the specific language governing permissions and
 /// limitations under the License.
 ///
+/// <summary>
+///
+/// </summary>
 public class CollectibleController : MonoBehaviour {
 
-	// Update is called once per frame
+	/// <summary>
+	///
+	/// </summary>
 	void Update () {
 		transform.Rotate(new Vector3(30, 30, 45) * Time.deltaTime);
 	}
