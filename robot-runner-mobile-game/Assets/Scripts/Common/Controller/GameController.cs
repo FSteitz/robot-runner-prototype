@@ -26,7 +26,8 @@ namespace Vaneftec.Game.Common.Controller {
 	///
 	/// </summary>
 	public abstract class GameController : MonoBehaviour {
-		protected static GameContext gameContext = GameContext.get();
+		protected static GameContext gameContext;
+
 		protected LevelManager levelManager;
 		protected ScoreManager scoreManager;
 		protected GameSettings gameSettings;
@@ -36,7 +37,7 @@ namespace Vaneftec.Game.Common.Controller {
 
 			levelManager = gameContext.LevelManager;
 			scoreManager = gameContext.ScoreManager;
-			gameSettings = gameContext.GameSettings;		
+			gameSettings = gameContext.GameSettings;
 		}
 	}
 }
